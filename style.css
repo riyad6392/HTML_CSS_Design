@@ -65,6 +65,16 @@
     flex: 1;
     gap: 20px;
   }
+  .nav-links a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #5e3bee; /* or any hover color you prefer */
+  }
   
   .btn {
     padding: 10px 20px;
@@ -240,6 +250,129 @@
   width: 40px;
   height: 40px;
 }
+
+/* learning section */
+
+.improvement-list {
+  background-color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.learning-section {
+  padding: 80px 0;
+  background-color: #fff;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.learning-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.learning-section p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+  margin-bottom: 60px;
+}
+
+.learning-grid .item {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+  font-weight: 500;
+  position: relative;
+  padding-left: 40px;
+}
+
+.learning-grid .item::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #5e3bee;
+  border-radius: 50%;
+  position: absolute;
+  left: 20px;
+  top: 24px;
+}
+
+.free-chapter-box {
+  background-color: #2e2e63;
+  color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.free-chapter-box .text h4 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.free-chapter-box .text p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #cfd1f1;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #5e3bee;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn-red {
+  background: #f2545b;
+}
+
+.btn-red:hover {
+  background: #d14047;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.stats div {
+  text-align: center;
+  max-width: 200px;
+}
+
+.stats strong {
+  font-size: 1.8rem;
+  color: #5e3bee;
+}
+
+.stats p {
+  margin-top: 8px;
+  color: #666;
+  font-size: 0.95rem;
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {

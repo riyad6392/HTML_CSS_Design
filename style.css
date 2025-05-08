@@ -187,7 +187,7 @@
 /* features  */
 
 .features {
-  background-color: #f7f7fb;
+  background-color: #f5f5f9;
   padding: 80px 20px;
   text-align: center;
 }
@@ -261,9 +261,14 @@
 
 .learning-section {
   padding: 80px 0;
-  background-color: #fff;
+  background-color: #f7f7fb;
   text-align: center;
   font-family: 'Inter', sans-serif;
+}
+
+.learning-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .learning-section h2 {
@@ -286,25 +291,31 @@
 }
 
 .learning-grid .item {
-  background: #fff;
+  background: #ffffff;
   border-radius: 10px;
-  padding: 20px;
+  padding: 20px 20px 20px 50px; /* space for the mark */
   text-align: left;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   font-weight: 500;
   position: relative;
-  padding-left: 40px;
 }
 
+
 .learning-grid .item::before {
-  content: '';
-  width: 10px;
-  height: 10px;
-  background: #5e3bee;
-  border-radius: 50%;
+  content: "✓";
   position: absolute;
+  top: 20px;
   left: 20px;
-  top: 24px;
+  width: 20px;
+  height: 20px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .free-chapter-box {
@@ -319,13 +330,33 @@
   margin-bottom: 60px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
+.book-image {
+  display: block;
+  width: 80px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.free-chapter-box img {
+  margin: 0;
+  padding: 0;
+}
+
+.media {
+  display: flex;
+  align-items: center;
+  gap: 40px; 
+}
 
 .free-chapter-box .text h4 {
+  text-align: left;
   margin: 0 0 8px;
   font-size: 1.2rem;
 }
 
 .free-chapter-box .text p {
+  text-align: left;
   margin: 0;
   font-size: 0.95rem;
   color: #cfd1f1;

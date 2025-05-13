@@ -20,9 +20,11 @@
     display: block;
   }
   .container {
-    /* width: 90%; */
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
+
   }
   
   /* Header */
@@ -86,7 +88,68 @@
   .btn-red {
     background-color: #F0534C;
     color: #fff;
+    /* width: 100%; */
   }
+
+  @media (max-width: 542px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .main-nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .nav-links a {
+    margin: 0;
+  }
+
+  .btn-red {
+    margin-top: 10px;
+    width: 100%; /* Ensure the button takes full width */
+    text-align: center;
+  }
+}
+
+/* Responsive for small screens (mobile) */
+@media (max-width: 300px) {
+  .logo {
+    font-size: 0.9rem;
+  }
+
+  .main-nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+  }
+
+  .btn-red {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
   
   /* Hero Section */
   .hero {
@@ -162,6 +225,65 @@
     color: #3b49df;
     font-weight: 500;
   }
+
+  @media (max-width: 768px) {
+  .hero-content {
+    gap: 20px;
+    text-align: center;
+    flex-direction: column; /* Stack content vertically */
+  }
+
+  .hero-image {
+    flex: 1 1 100%; /* Full width for the image on smaller screens */
+    margin-bottom: 20px; /* Add spacing below the image */
+  }
+
+  .hero-text {
+    flex: 1 1 100%; /* Take full width for the text */
+  }
+
+  .hero-text h1 {
+    font-size: 2rem; /* Adjust font size for medium screens */
+  }
+
+  .hero-text ul li {
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .subtext {
+    font-size: 0.9rem; /* Adjust font size */
+  }
+}
+
+/* For small screens (phones) */
+@media (max-width: 480px) {
+  .hero-content {
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .hero-image {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+
+  .hero-text {
+    flex: 1 1 100%;
+    padding: 0 10px; /* Add padding for better spacing */
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem; /* Smaller font size for mobile */
+  }
+
+  .hero-text ul li {
+    font-size: 0.85rem; /* Smaller font size for mobile */
+  }
+
+  .subtext {
+    font-size: 0.9rem; /* Adjust font size */
+  }
+}
   
   /* Testimonial Section */
   .testimonial .container {
@@ -209,21 +331,25 @@
     margin-bottom : 40px;
   }
 
-  @media (max-width: 600px) {
-    .testimonial-content {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .text-content {
-      align-items: center;
-    }
-  
-    .author-image {
-      margin-bottom: 15px;
-    }
+ @media (max-width: 600px) {
+  .testimonial-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
+
+  .text-content {
+    min-width: auto;
+  }
+
+  .author-image {
+    margin-bottom: 15px;
+  }
+
+  .quote {
+    font-size: 0.95rem;
+  }
+}
 
 /* features  */
 hr {
@@ -481,6 +607,37 @@ hr {
   font-size: 0.95rem;
 }
 
+@media (max-width: 480px) {
+  .learning-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .free-chapter-box {
+    padding: 20px;
+  }
+
+  .book-image {
+    width: 60px;
+  }
+
+  .learning-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .learning-section p {
+    font-size: 0.85rem;
+  }
+
+  .stats strong {
+    font-size: 1.5rem;
+  }
+
+  .stats p {
+    font-size: 0.85rem;
+  }
+}
+
+
 /* Review Section */
 .reviews-section {
   padding: 60px 20px;
@@ -572,6 +729,51 @@ hr {
   font-size: 0.95rem;
 }
 
+@media (max-width: 480px) {
+  .reviews-section {
+    padding: 40px 15px;
+  }
+
+  .reviews-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .reviews-section p {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+
+  .review-card {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .stars::before {
+    font-size: 1.2rem;
+  }
+
+  .review-card p {
+    font-size: 0.9rem;
+  }
+
+  .review-link {
+    font-size: 0.9rem;
+  }
+
+  .reviewer img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .reviewer strong {
+    font-size: 0.95rem;
+  }
+
+  .reviewer span {
+    font-size: 0.8rem;
+  }
+}
+
 /* aurthor section */
 .author {
   background-color: #f5f5f9;
@@ -637,6 +839,64 @@ hr {
 .author-text a {
   color: #0b0b0c;
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .author-content {
+    margin-left: 20px; /* Small margin for better spacing */
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  .author-image {
+    width: 100px; /* Adjust image size */
+    height: 100px;
+  }
+
+  .author-image1 {
+    max-width: 150px; /* Smaller max width for the second image */
+  }
+
+  .author-text {
+    max-width: 500px; /* Reduce max width for better alignment */
+  }
+
+  .author-text h3 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .author-text p {
+    font-size: 14px; /* Adjust font size */
+  }
+}
+
+/* For small screens (phones) */
+@media (max-width: 480px) {
+  .author-content {
+    margin-left: 0; /* Remove left margin on very small screens */
+    text-align: center; /* Ensure the text is centered */
+  }
+
+  .author-image {
+    width: 80px; /* Adjust image size further */
+    height: 80px;
+  }
+
+  .author-image1 {
+    max-width: 130px; /* Adjust max width for the second image */
+  }
+
+  .author-text {
+    max-width: 100%; /* Allow text to take full width */
+    padding: 0 10px; /* Add some padding for spacing */
+  }
+
+  .author-text h3 {
+    font-size: 18px; /* Smaller font size */
+  }
+
+  .author-text p {
+    font-size: 13px; /* Adjust font size */
+  }
 }
 
 /* Pricing & Plans section */
@@ -810,6 +1070,61 @@ hr {
   margin-left: 30px;
 }
 
+@media (max-width: 600px) {
+  .pricing {
+    padding: 50px 15px;
+  }
+
+  .pricing .section-title {
+    font-size: 28px;
+  }
+
+  .pricing .section-subtitle,
+  .pricing .section-subtitle1 {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .pricing-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .faq-item h4 {
+    font-size: 14px;
+  }
+
+  .faq-item p {
+    font-size: 13px;
+  }
+
+  .email-input {
+    padding: 14px 14px 14px 50px;
+    background-position: 12px center;
+    font-size: 13px;
+  }
+
+  .btn1,
+  .btn2,
+  .btn3 {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 14px;
+  }
+}
+
 /* CTA Section */
 .cta-section {
   background-color: #f9f9fb;
@@ -872,6 +1187,43 @@ hr {
 
 .footer-links a:hover {
   text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack items vertically on tablet */
+    text-align: center; /* Center text on tablets */
+  }
+
+  .footer-links {
+    justify-content: center; /* Center the links */
+  }
+
+  .footer-links a {
+    margin-bottom: 10px; /* Add space between links */
+  }
+
+  .footer {
+    padding: 40px 20px; /* Add more padding for better spacing */
+  }
+}
+
+/* For small screens (phones) */
+@media (max-width: 480px) {
+  .footer-container {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center text on small screens */
+    font-size: 0.85rem; /* Slightly smaller font size for mobile */
+  }
+
+  .footer-links a {
+    margin: 0 5px; /* Reduce space between links */
+  }
+
+  .footer {
+    padding: 50px 20px; /* Add more padding for better spacing */
+  }
 }
 
 

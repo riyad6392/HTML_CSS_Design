@@ -124,6 +124,11 @@
     width: 100%; /* Ensure the button takes full width */
     text-align: center;
   }
+    .header nav a {
+    margin-left: 0;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
 }
 
 /* Responsive for small screens (mobile) */
@@ -160,7 +165,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
   }
   .custom-list {
     list-style: none;
@@ -181,8 +186,8 @@
   position: absolute;
   top: 0.2rem;
   left: 0;
-  width: 21px;
-  height: 21px;
+  width: 18px;
+  height: 18px;
   background-color: #ece5e5; 
   color: #3b49df; 
   font-size: 12px;
@@ -197,9 +202,10 @@
   }
   .hero-text {
     flex: 1 1 50%;
+    padding-bottom: 20px;
   }
   .hero-text h1 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     margin-bottom: 30px;
     line-height: 1.3;
   }
@@ -299,6 +305,7 @@
   .testimonial-content {
     display: flex;
     align-items: flex-start;
+    padding-left: 50px;
     gap: 20px;
     flex-wrap: wrap;
   }
@@ -315,12 +322,12 @@
     flex: 1;
     min-width: 200px;
   }
-  
   .quote {
-    font-size: 1.0rem;
+    font-size: .8rem;
     font-style: italic;
     font-weight: 500;
-    margin: 6px 0 18px;
+    padding-right: 115px;
+    margin: 0px 0 10px;
     line-height: 2;
   }
   
@@ -335,19 +342,62 @@
   .testimonial-content {
     flex-direction: column;
     align-items: center;
+    padding-left: 0;
     text-align: center;
   }
 
-  .text-content {
-    min-width: auto;
+  .author-image {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
   }
 
-  .author-image {
-    margin-bottom: 15px;
+  .text-content {
+    padding: 0 10px;
   }
 
   .quote {
     font-size: 0.95rem;
+    padding-right: 0;
+    line-height: 1.6;
+  }
+
+  .author-name {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 300px) {
+  .testimonial .container {
+    padding: 15px 10px;
+  }
+
+  .testimonial-content {
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .author-image {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+
+  .text-content {
+    padding: 0 5px;
+  }
+
+  .quote {
+    font-size: 0.85rem;
+    padding-right: 0;
+    line-height: 1.4;
+  }
+
+  .author-name {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
   }
 }
 
@@ -374,7 +424,7 @@ hr {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 10px;
-  margin-right: 45px;
+  margin-right: 20px;
 }
 
 .section-subtitle {
@@ -423,6 +473,41 @@ hr {
 .icon-wrapper img {
   width: 40px;
   height: 40px;
+}
+
+
+@media (max-width: 480px) {
+  .features {
+    padding: 50px 15px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-right: 0;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+
+  .features-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .feature-item {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .feature-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .feature-item p {
+    font-size: 0.9rem;
+  }
 }
 
 /* learning section */
@@ -612,6 +697,21 @@ hr {
     grid-template-columns: 1fr;
   }
 
+  .learning-grid .item,
+  .learning-grid .item1 {
+    padding: 12px 15px 12px 45px;
+    font-size: 0.9rem;
+  }
+
+  .learning-grid .item::before,
+  .learning-grid .item1::before {
+    top: 15px;
+    left: 15px;
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+  }
+
   .free-chapter-box {
     padding: 20px;
   }
@@ -635,6 +735,37 @@ hr {
   .stats p {
     font-size: 0.85rem;
   }
+
+  .free-chapter-box {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .media {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .book-image {
+    width: 60px;
+  }
+
+  .free-chapter-box .text h4 {
+    font-size: 1.1rem;
+  }
+
+  .free-chapter-box .text p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
 }
 
 
@@ -657,7 +788,7 @@ hr {
 
 .reviews-section p {
   color: #666;
-  font-size: 1rem;
+  font-size: .85rem;
   margin-bottom: 40px;
 }
 
@@ -734,6 +865,11 @@ hr {
     padding: 40px 15px;
   }
 
+   .review-grid {
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+  }
+
   .reviews-section h2 {
     font-size: 1.5rem;
   }
@@ -798,8 +934,8 @@ hr {
 }
 
 .author-image {
-  width: 110px;
-  height: 110px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
 }
